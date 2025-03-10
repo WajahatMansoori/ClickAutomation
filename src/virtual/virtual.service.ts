@@ -32,7 +32,7 @@ export class VirtualService {
       }
 
       // Open Google
-      await this.driver.get('https://www.google.com');
+      await this.driver.get('https://www.google.com/?hl=en');
 
       // Log the current URL to ensure we are on the correct page
       const currentUrl = await this.driver.getCurrentUrl();
@@ -62,7 +62,7 @@ export class VirtualService {
       for (const result of results) {
         const link = await result.getAttribute('href');
         if (link) {
-          links.push(link);
+          links.push(link); 
         }
       }
 
